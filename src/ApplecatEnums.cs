@@ -21,14 +21,5 @@ namespace applecat
                 ApplecatEnums.registed = true;
             }
         }
-        public static void UnregisterValues()
-        {
-            bool flag = DroneMasterEnums.registed;
-            if (flag)
-            {
-                DroneMasterEnums.MeetDroneMaster.Unregister();
-                DroneMasterEnums.registed = false;
-            }
-        }
     }
 }

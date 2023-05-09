@@ -19,6 +19,11 @@ namespace applecat
             On.Menu.SlugcatSelectMenu.SlugcatPage.AddAltEndingImage += SlugcatPage_AddAltEndingImage;
         }
 
+        private static void RainWorldGame_GoToRedsGameOver(On.RainWorldGame.orig_GoToRedsGameOver orig, RainWorldGame self)
+        {
+            throw new NotImplementedException();
+        }
+
         private static void SlugcatPage_AddAltEndingImage(On.Menu.SlugcatSelectMenu.SlugcatPage.orig_AddAltEndingImage orig, Menu.SlugcatSelectMenu.SlugcatPage self)
         {
             throw new NotImplementedException();
@@ -37,32 +42,6 @@ namespace applecat
         private static void SlideShow_ctor(On.Menu.SlideShow.orig_ctor orig, Menu.SlideShow self, ProcessManager manager, Menu.SlideShow.SlideShowID slideShowID)
         {
             throw new NotImplementedException();
-        }
-
-        private static void RainWorldGame_GoToRedsGameOver(On.RainWorldGame.orig_GoToRedsGameOver orig, RainWorldGame self)
-        {
-            bool flag = self.GetStorySession.saveState.saveStateNumber == new global::SlugcatStats.Name(Plugin.DroneMasterName, false);
-            if (flag)
-            {
-                self.manager.rainWorld.progression.currentSaveState.deathPersistentSaveData.altEnding = true;
-                bool flag2 = self.manager.upcomingProcess != null;
-                if (!flag2)
-                {
-                    bool flag3 = self.manager.musicPlayer != null;
-                    if (flag3)
-                    {
-                        self.manager.musicPlayer.FadeOutAllSongs(20f);
-                    }
-                    self.GetStorySession.saveState.SessionEnded(self, true, false);
-                    self.manager.statsAfterCredits = true;
-                    self.manager.nextSlideshow = ApplecatEnums.DroneMasterAltEnd;
-                    self.manager.RequestMainProcessSwitch(global::ProcessManager.ProcessID.SlideShow);
-                }
-            }
-            else
-            {
-                orig(self);
-            }
         }
     }
 }
