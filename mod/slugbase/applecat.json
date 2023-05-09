@@ -1,0 +1,15 @@
+{
+	"id": "applecat",
+	"name": "THE AppleCat",
+	"description": "This peculiar creature mimicked plants for photosynthesis and gave up hunting and eating. <LINE>But its journey has not been smooth sailing – there are still countless predators who want to eat it.",
+	"features": {
+		"color": "ff0000",
+		
+		"applecat/discoloration":true,
+		"select_menu_scene": "Slugcat_applecat",
+		"select_menu_scene_ascended": "Ghost_applecat",
+		"sleep_scene": "Sleep_applecat",
+		"applecat/mean_lizards": 0.8,
+		"world_state": "white"
+	}
+}

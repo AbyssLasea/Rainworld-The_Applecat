@@ -1,0 +1,9 @@
+﻿{
+	"id": "applecat",
+	"name": "The AppleCat",
+	"version": "0.1.1",
+	"authors": "AbyssLasea",
+	"description": "An applecat that can only carry out photosynthesis",
+	"requirements": [ "slime-cubed.slugbase" ],
+	"requirements_names": [ "SlugBase" ]
+}
